@@ -1,0 +1,153 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number;
+    int sum = 0;
+    cin >> number;
+
+    while (number != 0) {
+        sum += number;
+        cin >> number;
+    }
+
+    cout << sum << endl;
+
+    return 0;
+}
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number;
+    cin >> number;
+
+    cout << endl;
+
+    while (number > 0) {
+        cout << "Отсчет " << number << endl;
+        number--;
+    }
+
+    cout << endl;
+
+    return 0;
+}
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number;
+    int count = 0;
+    int sum = 0;
+    cin >> number;
+
+    while (number != 0) {
+        count++; 
+        sum += number;
+        cin >> number;
+    }
+
+    cout << "[ + ] Количество чисел " << count << endl;
+    cout << "[ + ] Сумма " << sum << endl;
+
+    return 0;
+}
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number;
+    int count = 0;
+    cin >> number;
+    if (number == 0) {
+        count = 1;
+    }
+    else {
+        int temp = number;
+
+        while (temp > 0) {
+            count++;
+            temp /= 10;    
+        }
+    }
+
+    cout << count << endl;
+
+    return 0;
+}
+
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number;
+    cin >> number;
+
+    int i = 1;
+
+    while (i <= 10) {
+        cout << "[ + ] " << number << " × " << i << " = " << number * i << endl;
+        i++;
+    }
+
+    return 0;
+}
+    
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    const string correct_password = "12345";
+    string user_input;
+    cout << "Проверка пароля" << endl;
+    cout << "[ + ] Введите пароль: ";
+    cin >> user_input;
+    while (user_input != correct_password) {
+        cout << "[ - ] Неверный пароль!" << endl;
+        cout << "[ + ] Введите пароль: ";
+        cin >> user_input;
+    }
+    cout << "[ + ] Добро пожаловать!" << endl;
+
+    return 0;
+}
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Среднее арифметическое" << endl;
+    double sum = 0.0;
+    int count = 0;
+    double number;
+
+    while (true) {
+        cout << "[ + ] Введите число: ";
+        cin >> number;
+
+        if (number == 0) {
+            break;
+        }
+        sum += number;
+        count++;
+    }
+    if (count > 0) {
+        double average = sum / count;
+        cout << "[ + ] Среднее арифметическое: " << average << endl;
+    }
+    else {
+        cout << "[ + ] Не было введено ни одного числа (кроме 0)" << endl;
+    }
+
+    return 0;
+}
